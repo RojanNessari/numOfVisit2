@@ -10,8 +10,19 @@ const port=3000;
    const lastVisit=req.cookies.lastVisit||'this is the first time you are using the website';
    numVisit+=1;
 
+ const options = {
+     weekday: 'short',
+     year: 'numeric',
+     month: 'short',
+     day: 'numeric',
+     hour: '2-digit',
+     minute: '2-digit',
+     second: '2-digit',
+     timeZone: 'America/Toronto',  // Montreal timezone
+     timeZoneName: 'short'
+   };
    const date= new Date();
-   const currentTime=date.toString();
+   const currentTime=date.toLocaleTimeString('en-ca',options);
 
    res.cookie('numVisit',numVisit,{maxAge:10000});
    res.cookie('lastVisit',currentTime,{maxAge:10000});
