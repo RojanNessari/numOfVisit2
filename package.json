@@ -70,9 +70,8 @@
   },
   "devDependencies": {},
   "scripts": {
-    "start": "node numOfVisits.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "start": "node numOfVisits.js"
+},
   "author": "",
   "license": "ISC",
   "description": ""
